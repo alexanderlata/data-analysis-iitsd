@@ -1,0 +1,133 @@
+\documentclass[a4,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[english, russian]{babel}
+
+
+\usepackage{csquotes}
+\usepackage{epigraph}
+\usepackage{tcolorbox}
+% Определяем окружение для Формата ввода
+\newtcolorbox{inputformat}[1][]{colback=blue!5!white, colframe=blue!65!black,
+    fonttitle=\bfseries, title=Формат ввода, #1}
+
+% Определяем окружение для Формата вывода
+\newtcolorbox{outputformat}[1][]{colback=green!5!white, colframe=green!65!black,
+    fonttitle=\bfseries, title=Формат вывода, #1}
+
+% Определяем окружение для комментария
+\newtcolorbox{exercisecomment}[1][]{colback=yellow!5!white, colframe=yellow!80!black, fonttitle=\bfseries, title=Комментарий, #1}
+
+% Определяем окружение для замечания
+\newtcolorbox{exercisenote}[1][]{colback=red!5!white, colframe=red!80!black, fonttitle=\bfseries, title=Замечание, #1}
+
+
+\usepackage{geometry}
+%\geometry{papersize={20.3 cm,25.4 cm}}
+\geometry{left=2cm}
+\geometry{right=2cm}
+\geometry{top=2cm}
+\geometry{bottom=2cm}
+
+
+\usepackage{amsmath, amsfonts, amsthm, amssymb, amsopn, amscd}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage[mathscr]{eucal}
+
+\usepackage{hyperref}
+\hypersetup{unicode=true,final=true,colorlinks=true}
+
+\theoremstyle{remark}
+%\newtheorem{exercise}{Упражнение}
+\newtheorem{exercise}{\textbf{Упражнение}}[section]
+\renewcommand{\theexercise}{\textbf{\arabic{exercise}}}
+%\renewcommand{\theexercise}{\textbf{\#\arabic{exercise}}}
+
+
+\title{Листок 02. Визуализация}
+
+\author{А.Н. Лата}
+
+\begin{document}
+
+\section*{\centering Листок 02. Визуализация}
+
+\begin{exercise}
+Загрузите датасет \texttt{sleep75}.
+\begin{enumerate}
+	\item нарисуйте гистограммы для переменных sleep, totwrk, age, hrwage, educ
+	\item нарисуйте гистограмму с накопление для sleep относительно male 
+	\item нарисуйте гистограмму с накопление для totwrk относительно south 
+	\item нарисуйте гистограмму с накопление для totwrk относительно smsa 
+	\item нарисуйте диаграмму рассеяния sleep vs totwrk
+	\item нарисуйте диаграмму рассеяния sleep vs totwrk с группировкой по male
+	\item нарисуйте диаграмму рассеяния sleep vs age
+	\item нарисуйте диаграмму рассеяния sleep vs age с группировкой по south
+	\item нарисуйте диаграмму рассеяния sleep vs edu
+	\item нарисуйте диаграмму рассеяния sleep vs edu с группировкой по smsa
+	\item визуализируйте корреляционную матриц для следующих переменных: sleep, totwrk, age
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Загрузите датасет \texttt{Labour}.
+\begin{enumerate}
+	\item нарисуйте гистограммы для переменных output, capital, labour, wage
+	\item нарисуйте гистограммы для log-переменных output, capital, labour, wage
+	\item нарисуйте диаграммы рассеяния output vs других переменных
+	\item нарисуйте диаграммы рассеяния log(output) vs log других переменных
+	\item визуализируйте корреляционную матриц для всех переменных
+	\item визуализируйте корреляционную матриц для log-переменных
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Загрузите датасет \texttt{Electricity}.
+\begin{enumerate}
+	\item нарисуйте гистограммы для переменных cost, q, pf, pk, pl
+	\item нарисуйте гистограммы для log-переменных cost, q, pf, pk, pl
+	\item нарисуйте диаграммы рассеяния cost vs других переменных
+	\item нарисуйте диаграммы рассеяния log(cost) vs log других переменных
+	\item визуализируйте корреляционную матриц для всех переменных
+	\item визуализируйте корреляционную матриц для log-переменных
+\end{enumerate}
+\end{exercise}
+
+\newpage
+
+\begin{exercise}
+Загрузите датасет \texttt{diamonds}.
+\begin{enumerate}
+	\item нарисуйте гистограммы для переменных price, carat
+	\item нарисуйте гистограммы для log-переменных price, carat
+	\item нарисуйте гистограмму с накопление для price относительно cut
+	\item нарисуйте гистограмму с накопление для carat относительно clarity 
+	\item нарисуйте гистограмму с накопление для log(price) относительно color
+	\item нарисуйте гистограмму с накопление для log(carat) относительно color
+	\item нарисуйте диаграмму рассеяния price vs carat
+	\item нарисуйте диаграмму рассеяния log-price vs log-carat
+	\item нарисуйте диаграмму рассеяния log-price vs log-carat с группировкой по cut
+	\item нарисуйте диаграмму рассеяния log-price vs log-carat с группировкой по color
+	\item нарисуйте диаграмму рассеяния log-price vs log-carat с группировкой по clarity
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Загрузите датасет \texttt{Diamond}.
+\begin{enumerate}
+	\item нарисуйте гистограммы для переменных price, carat
+	\item нарисуйте гистограммы для log-переменных price, carat
+	\item нарисуйте гистограмму с накопление для price относительно certification
+	\item нарисуйте гистограмму с накопление для carat относительно clarity 
+	\item нарисуйте гистограмму с накопление для log(price) относительно colour
+	\item нарисуйте гистограмму с накопление для log(carat) относительно colour
+	\item нарисуйте диаграмму рассеяния price vs carat
+	\item нарисуйте диаграмму рассеяния log-price vs log-carat
+	\item нарисуйте диаграмму рассеяния log-price vs log-carat с группировкой по certification
+	\item нарисуйте диаграмму рассеяния log-price vs log-carat с группировкой по colour
+	\item нарисуйте диаграмму рассеяния log-price vs log-carat с группировкой по clarity
+\end{enumerate}
+\end{exercise}
+
+\end{document}
