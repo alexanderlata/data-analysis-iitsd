@@ -1,0 +1,199 @@
+\documentclass[a4,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[english, russian]{babel}
+
+
+\usepackage{csquotes}
+\usepackage{epigraph}
+\usepackage{tcolorbox}
+% Определяем окружение для Формата ввода
+\newtcolorbox{inputformat}[1][]{colback=blue!5!white, colframe=blue!65!black,
+    fonttitle=\bfseries, title=Формат ввода, #1}
+
+% Определяем окружение для Формата вывода
+\newtcolorbox{outputformat}[1][]{colback=green!5!white, colframe=green!65!black,
+    fonttitle=\bfseries, title=Формат вывода, #1}
+
+% Определяем окружение для комментария
+\newtcolorbox{exercisecomment}[1][]{colback=yellow!5!white, colframe=yellow!80!black, fonttitle=\bfseries, title=Комментарий, #1}
+
+% Определяем окружение для замечания
+\newtcolorbox{exercisenote}[1][]{colback=red!5!white, colframe=red!80!black, fonttitle=\bfseries, title=Замечание, #1}
+
+
+\usepackage{geometry}
+%\geometry{papersize={20.3 cm,25.4 cm}}
+\geometry{left=2cm}
+\geometry{right=2cm}
+\geometry{top=2cm}
+\geometry{bottom=2cm}
+
+
+\usepackage{amsmath, amsfonts, amsthm, amssymb, amsopn, amscd}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage[mathscr]{eucal}
+
+\usepackage{hyperref}
+\hypersetup{unicode=true,final=true,colorlinks=true}
+
+\theoremstyle{remark}
+%\newtheorem{exercise}{Упражнение}
+\newtheorem{exercise}{\textbf{Упражнение}}[section]
+\renewcommand{\theexercise}{\textbf{\arabic{exercise}}}
+%\renewcommand{\theexercise}{\textbf{\#\arabic{exercise}}}
+
+
+\title{Листок 01. Описательные статистики}
+
+\author{А.Н. Лата}
+
+\begin{document}
+
+\section*{\centering Листок 01. Описательные статистики}
+\subsection*{Библиотека Pandas}
+\begin{exercise}
+Загрузите датасет \texttt{sleep75}.
+\begin{enumerate}
+	\item вычислите размер датасета (число наблюдений \& число переменных)
+	\item Заполните следующую таблицу со значениями переменных
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|} \hline
+			index & sleep & totwrk & age & male\\ \hline\hline
+			0 & & & & \\ \hline
+			5 & & & & \\ \hline
+			100 & & & & \\ \hline
+			700 & & & & \\ \hline
+		\end{tabular}
+	\end{center}
+	\item Вычислите корреляционную матрицу для следующих переменных: sleep, totwrk, age 
+	\item Заполните следующую таблицу
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|} \hline
+			Desc.Stat & sleep & totwrk & age & hrwage\\ \hline\hline
+			max & & & & \\ \hline
+			min & & & & \\ \hline
+			mean & & & & \\ \hline
+			median & & & & \\ \hline
+			st.dev & & & & \\ \hline
+			var (unbiased) & & & & \\ \hline
+			var (biased) & & & & \\ \hline
+			1st quartile & & & & \\ \hline
+			3rd quartile & & & & \\ \hline
+		\end{tabular}
+	\end{center}
+	Замечание: 1st/3rd квантили -- 25\%/75\% квантили соответственно.
+	\item Сколько наблюдения соответствуют следующим условиям
+	\begin{enumerate}
+		\item sleep>3000
+		\item totwrk<2000
+		\item age>40
+		\item age<30
+	\end{enumerate}
+	\item Сколько наблюдений с условием totwrk=0? 
+	Кто эти люди?
+	\item Есть ли в датасете пропущенные наблюдения?
+	Сколько их?
+\end{enumerate}
+\end{exercise}
+
+\newpage
+
+\begin{exercise}
+Загрузите датасет \texttt{Electricity}.
+\begin{enumerate}
+	\item вычислите размер датасета (число наблюдений \& число переменных)
+	\item заполните следующую таблицу со значениями переменных
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|} \hline
+			index & cost & q & pl & pk & pf \\ \hline\hline
+			1 & & & & & \\ \hline
+			15 & & & &  & \\ \hline
+			48 & & & & & \\ \hline
+			87 & & & & & \\ \hline
+		\end{tabular}
+	\end{center}
+	\item Вычислите корреляционную матрицу для следующих переменных: cost, q, pl, pk, pf 
+	\item Заполните следующую таблицу
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|} \hline
+			Desc.Stat & cost & q & pl & pk & pf\\ \hline\hline
+			max & & & & & \\ \hline
+			min & & & & & \\ \hline
+			mean & & & &  & \\ \hline
+			median & & & & & \\ \hline
+			st.dev & & & & & \\ \hline
+			var (unbiased) & & & & & \\ \hline
+			var (biased) & & & & & \\ \hline
+			1st quartile & & & & & \\ \hline
+			3rd quartile & & & & & \\ \hline
+		\end{tabular}
+	\end{center}
+	Замечание: 1st/3rd квантили -- 25\%/75\% квантили соответственно.
+	\item Сколько наблюдения соответствуют следующим условиям
+		\begin{enumerate}
+			\item cost>40
+			\item q<5000
+			\item q>4000
+			\item 20<cost<50
+		\end{enumerate}
+	\item Есть ли в датасете пропущенные наблюдения?
+	Сколько их?
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Загрузите датасет \texttt{wage2}.
+\begin{enumerate}
+	\item вычислите размер датасета (число наблюдений \& число переменных)
+	\item заполните следующую таблицу со значениями переменных
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|c|} \hline
+			index & wage & hours& IQ & educ & exper & age \\ \hline\hline
+			1 & & & & & & \\ \hline
+			25 & & & &  & & \\ \hline
+			179 & & & & & & \\ \hline
+			800 & & & & & & \\ \hline
+		\end{tabular}
+	\end{center}
+	\item Вычислите корреляционную матрицу для следующих переменных: wage, hours, IQ, educ, exper 
+	\item Заполните следующую таблицу
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|c|} \hline
+			Desc.Stat & wage & hours& IQ & educ & exper & wage \\ \hline\hline
+			max & & & & & & \\ \hline
+			min & & & & & & \\ \hline
+			mean & & & & & & \\ \hline
+			median & & & & & & \\ \hline
+			st.dev & & & & & & \\ \hline
+			var (unbiased) & & & & & & \\ \hline
+			var (biased) & & & & & & \\ \hline
+			1st quartile & & & & & & \\ \hline
+			3rd quartile & & & & & & \\ \hline
+		\end{tabular}
+	\end{center}
+	Замечание: 1st/3rd квантили -- 25\%/75\% квантили соответственно.
+	\item Сколько наблюдения соответствуют следующим условиям
+		\begin{enumerate}
+			\item wage>1000
+			\item age<40
+			\item exper>10
+			\item 100<IQ<130
+		\end{enumerate}
+	\item Есть ли в датасете пропущенные наблюдения?
+	Сколько их?
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Загрузите датасет \texttt{Labour}. Создайте новый датасет, 
+содержащий log-переменные из исходного датасета.
+\end{exercise}
+
+\begin{exercise}
+Загрузите датасет \texttt{Electricity}. Создайте новый датасет, 
+содержащий log-переменные из исходного датасета.
+\end{exercise}
+
+\end{document}
