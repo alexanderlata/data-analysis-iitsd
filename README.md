@@ -29,3 +29,4 @@
 |:-:|-|:-:|
 |[Листок 01](https://github.com/alexanderlata/data-analysis-iitsd/blob/main/exercises/list01-intro.pdf)| Описательные статистики | [Примеры](https://github.com/alexanderlata/data-analysis-iitsd/tree/main/pandas)|
 |[Листок 02](https://github.com/alexanderlata/data-analysis-iitsd/blob/main/exercises/list02-visualization.pdf)| Визуализация | [Примеры](https://github.com/alexanderlata/data-analysis-iitsd/tree/main/visualization)|
+|[Листок 03](https://github.com/alexanderlata/data-analysis-iitsd/blob/main/exercises/list03-linear-regression.pdf)| Линейная регрессия | [Примеры]()|
