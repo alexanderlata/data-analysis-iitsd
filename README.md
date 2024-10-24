@@ -29,4 +29,6 @@
 |:-:|-|:-:|
 |[Листок 01](https://github.com/alexanderlata/data-analysis-iitsd/blob/main/exercises/list01-intro.pdf)| Описательные статистики | [Примеры](https://github.com/alexanderlata/data-analysis-iitsd/tree/main/pandas)|
 |[Листок 02](https://github.com/alexanderlata/data-analysis-iitsd/blob/main/exercises/list02-visualization.pdf)| Визуализация | [Примеры](https://github.com/alexanderlata/data-analysis-iitsd/tree/main/visualization)|
-|[Листок 03](https://github.com/alexanderlata/data-analysis-iitsd/blob/main/exercises/list03-linear-regression.pdf)| Линейная регрессия | [Примеры]()|
+|[Листок 03](https://github.com/alexanderlata/data-analysis-iitsd/blob/main/exercises/list03-linear-regression.pdf)| Линейная регрессия | [Пример 1](https://github.com/alexanderlata/data-analysis-iitsd/blob/main/jupyter-notebooks/OLS.ipynb), [Пример 2](https://github.com/alexanderlata/data-analysis-iitsd/blob/main/jupyter-notebooks/linear-regression.ipynb)|
+|[Листок 04](https://github.com/alexanderlata/data-analysis-iitsd/blob/main/exercises/list04-kNN-regression.pdf)| k-NN | [Пример 1](https://github.com/alexanderlata/data-analysis-iitsd/blob/main/jupyter-notebooks/kNN.ipynb), [Пример 2](https://github.com/alexanderlata/data-analysis-iitsd/blob/main/jupyter-notebooks/prediction-viz.ipynb)|
+|[Листок 05](https://github.com/alexanderlata/data-analysis-iitsd/blob/main/exercises/list05-cross-validation.pdf)| Кросс-валидация моделей | [Примеры](https://github.com/alexanderlata/data-analysis-iitsd/blob/main/jupyter-notebooks/cross-validation.ipynb)|
