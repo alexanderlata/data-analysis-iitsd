@@ -1,0 +1,146 @@
+\documentclass[a4,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[english, russian]{babel}
+
+
+\usepackage{csquotes}
+\usepackage{epigraph}
+\usepackage{tcolorbox}
+% Определяем окружение для Формата ввода
+\newtcolorbox{inputformat}[1][]{colback=blue!5!white, colframe=blue!65!black,
+    fonttitle=\bfseries, title=Формат ввода, #1}
+
+% Определяем окружение для Формата вывода
+\newtcolorbox{outputformat}[1][]{colback=green!5!white, colframe=green!65!black,
+    fonttitle=\bfseries, title=Формат вывода, #1}
+
+% Определяем окружение для комментария
+\newtcolorbox{exercisecomment}[1][]{colback=yellow!5!white, colframe=yellow!80!black, fonttitle=\bfseries, title=Комментарий, #1}
+
+% Определяем окружение для замечания
+\newtcolorbox{exercisenote}[1][]{colback=red!5!white, colframe=red!80!black, fonttitle=\bfseries, title=Замечание, #1}
+
+
+\usepackage{geometry}
+%\geometry{papersize={20.3 cm,25.4 cm}}
+\geometry{left=2cm}
+\geometry{right=2cm}
+\geometry{top=2cm}
+\geometry{bottom=2cm}
+
+
+\usepackage{amsmath, amsfonts, amsthm, amssymb, amsopn, amscd}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage[mathscr]{eucal}
+
+\usepackage{hyperref}
+\hypersetup{unicode=true,final=true,colorlinks=true}
+
+\theoremstyle{remark}
+%\newtheorem{exercise}{Упражнение}
+\newtheorem{exercise}{\textbf{Упражнение}}[section]
+\renewcommand{\theexercise}{\textbf{\arabic{exercise}}}
+%\renewcommand{\theexercise}{\textbf{\#\arabic{exercise}}}
+
+
+
+\title{Листок 06. Задача кластеризации}
+
+\author{А.Н. Лата}
+
+\begin{document}
+
+\section*{\centering Листок 06. Задача кластеризации}
+
+
+\textbf{Замечание} \textit{обязательно проводим предварительную обработку данных:
+удаление пропущенных значений, нормировку, преобразование категориальных признаков}
+
+\begin{exercise}
+Для набора данных \texttt{countries} проведите разбиение на кластеры следующими
+методам:
+\begin{center}
+	\begin{tabular}{c|l}
+		Число кластеров & Метод \\ \hline
+		3 & k-средних \\
+		4 & k-средних \\
+		5 & k-средних \\
+		3 & иерархическая \\
+		4 & иерархическая \\
+		5 & иерархическая \\ \hline
+	\end{tabular}
+\end{center}
+Визуализируйте разбиение на кластеры на диаграмме рассеяния в переменных датасета
+\end{exercise}
+
+\begin{exercise}
+Для набора данных \texttt{countries} найдите <<оптимальное>> число кластеров
+для метода
+\begin{enumerate}
+	\item k-средних
+	\item иерархической кластеризации
+\end{enumerate}
+относительно метрик: Silhouette, Calinski-Harabasz, Davies-Bouldin
+\end{exercise}
+
+\begin{exercise}
+Из набора данных \texttt{countries} возьмите переменные 
+\texttt{sleep, totwrk, age, educ} и проведите разбиение на кластеры следующими
+методам:
+\begin{center}
+	\begin{tabular}{c|l}
+		Число кластеров & Метод \\ \hline
+		3 & k-средних \\
+		4 & k-средних \\
+		5 & k-средних \\
+		3 & иерархическая \\
+		4 & иерархическая \\
+		5 & иерархическая \\ \hline
+	\end{tabular}
+\end{center}
+Визуализируйте разбиение на кластеры на диаграмме рассеяния в переменных датасета
+\end{exercise}
+
+
+
+\begin{exercise}
+Из набора данных \texttt{countries} возьмите переменные 
+\texttt{sleep, totwrk, age, educ} и найдите <<оптимальное>> число кластеров
+для метода
+\begin{enumerate}
+	\item k-средних
+	\item иерархической кластеризации
+\end{enumerate}
+относительно метрик: Silhouette, Calinski-Harabasz, Davies-Bouldin
+\end{exercise}
+
+\begin{exercise}
+Для набора данных \texttt{Labour} проведите разбиение на кластеры следующими
+методам:
+\begin{center}
+	\begin{tabular}{c|l}
+		Число кластеров & Метод \\ \hline
+		3 & k-средних \\
+		4 & k-средних \\
+		5 & k-средних \\
+		3 & иерархическая \\
+		4 & иерархическая \\
+		5 & иерархическая \\ \hline
+	\end{tabular}
+\end{center}
+Визуализируйте разбиение на кластеры на диаграмме рассеяния в переменных датасета
+\end{exercise}
+	
+\begin{exercise}
+Для набора данных \texttt{Labour} найдите <<оптимальное>> число кластеров
+для метода
+\begin{enumerate}
+	\item k-средних
+	\item иерархической кластеризации
+\end{enumerate}
+относительно метрик: Silhouette, Calinski-Harabasz, Davies-Bouldin
+\end{exercise}
+
+\end{document}
